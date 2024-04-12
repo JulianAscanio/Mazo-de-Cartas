@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.imagenLogo {
+    position: relative;
+    top: 5px; 
+    left: 10px; 
+}
+
+.row{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.cartas img{
+    width: calc(25% - 10px);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.imagenLogo img {
+    max-width: 200px; 
+    max-height: 200px; 
+}
+
+.tabla{
+}
+
+.formulario {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid black;
+    font-family: Sans, Comic Sans MS, cursive;
+}
+
+.formulario h2 {
+    text-align: left;
+}
+
+.formulario input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+}
+
+.formulario input[type="submit"] {
+    width: 50%;
+    padding: 10px; 
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 3px solid black;
+    box-shadow:8px 8px #000;
+    cursor: pointer;
+    font-family: Sans, Comic Sans MS, cursive;
+    font-size: 15px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+@media (max-width: 800px){
+    .cartas{
+        flex: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+    }
+}
