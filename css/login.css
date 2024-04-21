@@ -1,100 +1,68 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Comic Sans, Comic Sans MS, cursive;
+    font-family: Arial, sans-serif;
+}
+
+.imagenLogo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagenLogo img {
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .formulario {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    max-width: 90%; 
-    width: 500px;
-    height: auto;
-    background-color: white;
-    border: 3px solid;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.formulario h3 {
-    text-align: left;
-    padding: 0 0 10px 0;
-    border-bottom: 3px solid #050505;
-    font-size: 18px;
-}
-
-.formulario form {
-    padding: 0 40px;
-    box-sizing: border-box;
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .username,
 .password {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.formulario form label {
+label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 18px;
-    
 }
 
-.username input,
-.password input {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    border: 1px solid #000000;
-    border: 3px solid;
-    font-size: 15px;
-}
-
-.formulario form input[type="button"] {
+input[type="text"],
+input[type="password"],
+button {
     width: 100%;
-    padding: 5px;
-    background-color: #d60808;
-    color: #fff;
-    border: none;
-    font-family: Sans, Comic Sans MS, cursive;
-    font-size: 20px;
-    margin-top: 10px;
-    box-shadow:8px 8px #000;
-    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
-.formulario form input[type="button"]:hover {
-    background-color: #bb0000;
+button {
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
 }
 
-.formulario footer {
-    padding: 20px 0;
-    border-top: 3px solid #000;
+button:hover {
+    background-color: #7e0000;
 }
 
-.imagenLogo {
-    position: absolute;
-    top: 20px; 
-    left: 20px; 
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
 }
 
-.imagenLogo img {
-    max-width: 200px; 
-    max-height: 200px; 
-}
-
-@media (max-width: 768px) {
-    .formulario {
-        width: 90%;
-    }
-
-    .imagenLogo {
-        top: 10px;
-        left: 10px;
-    }
-}
