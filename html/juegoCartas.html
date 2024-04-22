@@ -1,73 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/juegoCartas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Juego de cartas</title>
 </head>
+
 <body>
-    <div class="imagenLogo">
-        <img src="../img/login.webp" alt="">
+    <div>
+        <header class="bg-dark py-2 mb-4">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <img class="imagenLogo" src="">
+                </div>
+            </div>
+        </header>
     </div>
-    <div class="row">
-        <div class="column">
-            <div class="cartas">
-                <img src="../img/1.png">
-                <img src="../img/2.png">
-                <img src="../img/3.png">
-                <img src="../img/4.png">
-                <img src="../img/5.png">
-                <img src="../img/6.png">
-                <img src="../img/7.png">
-                <img src="../img/8.png">
-                <img src="../img/9.png">
-                <img src="../img/10.png">
-                <img src="../img/11.png">
-                <img src="../img/12.png">
-                <img src="../img/13.png">
-            </div>
-        </div>
-        <div class="column">
-            <div class="tabla">
-                <h2>Tabla</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Cartas</th>
-                            <th>Conteo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>As de Diamantes</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Fila 2, columna 1</td>
-                            <td>Fila 2, columna 2</td>
-                            <td>Fila 2, columna 3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="formulario">
-                <h2>Registro cartas</h2>
-                <form method="post">
-                    <div class="numero">
-                        <label>Número</label>
-                        <input type="text" required>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="btncarta col-6 col-md-3" data-carta="1">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/1.png" /></button>
                     </div>
-                    <div class="carta">
-                        <label>Carta</label>
-                        <input type="text" required></input>
+                    <div class="btncarta col-6 col-md-3" data-carta="2">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/2.png" /></button>
                     </div>
-                    <input type="submit" value="Guardar">
-                </form>
+                    <div class="btncarta col-6 col-md-3" data-carta="3">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/3.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="4">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/4.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="5">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/5.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="6">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/6.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="7">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/7.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="8">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/8.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="9">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/9.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="10">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/10.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="11">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/11.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="12">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/12.png" /></button>
+                    </div>
+                    <div class="btncarta col-6 col-md-3" data-carta="13">
+                        <button class="img-carta"><img class="img-thumbnail" src="../img/13.png" /></button>
+                    </div>
+                </div>
             </div>
+            <aside class="col-12 col-md-4">
+                <section class="col-12">
+                    <h2>Lista de cartas</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Carta</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaCartas">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>As</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>2 de diamantes</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>3 de corazonez</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="col-12">
+                    <h2>Registro cartas</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Número</label>
+                            <input type="text" id="numero" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Carta</label>
+                            <input type="text" id="carta" required></input>
+                        </div>
+                        <button id="guardar">Guardar</button>
+                    </form>
+                </section>
+            </aside>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/cartas.js"></script>
 </body>
+
 </html>
